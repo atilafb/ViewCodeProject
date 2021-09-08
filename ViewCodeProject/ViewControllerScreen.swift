@@ -13,9 +13,19 @@ final class ViewControllerScreen: UIView {
         let view = UIButton(frame: .zero)
         view.backgroundColor = .red
         view.setTitle("Fetch", for: .normal)
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    private lazy var gridContainer: UIStackView = {
+        let view = UIStackView(frame: .zero)
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        view.spacing = 8.0
+        return view
+    }()
+    
+    let leftBox = GridBoxView()
+    let rightBox = GridBoxView()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -33,13 +43,26 @@ final class ViewControllerScreen: UIView {
 extension ViewControllerScreen: CodeView {
     func buildViewHierarchy() {
         addSubview(button)
+        gridContainer.addArrangedSubview(leftBox)
+        gridContainer.addArrangedSubview(rightBox)
+        addSubview(gridContainer)
     }
     
     func setupConstraints() {
-        button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15).isActive = true
-        button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15).isActive = true
+        
+        gridContainer.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().inset(15)
+            make.height.equalTo(300)
+            make.centerY.equalToSuperview()
+        }
+        
+        button.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().inset(15)
+            make.height.equalTo(50)
+            make.bottom.equalTo(self).inset(15)
+        }
     }
     
     func setupAdditionalConfiguration() {

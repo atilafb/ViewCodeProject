@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		78B9547D26E73DAF0060650A /* ViewCodeProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9547C26E73DAF0060650A /* ViewCodeProjectUITests.swift */; };
 		78EFA6C726E7E51000441564 /* ViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFA6C626E7E51000441564 /* ViewControllerScreen.swift */; };
 		78EFA6CC26E7EF3700441564 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFA6CB26E7EF3700441564 /* ViewCode.swift */; };
+		78EFA70426E952B900441564 /* GridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFA70326E952B900441564 /* GridBoxView.swift */; };
 		AA23211CB24C9ECE9CA4370C /* Pods_ViewCodeProject_ViewCodeProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0889DB59D024618830790E0 /* Pods_ViewCodeProject_ViewCodeProjectUITests.framework */; };
 		B5C635A5B8EC69E9ECCDDA4A /* Pods_ViewCodeProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5C64749332C69C11CB0041 /* Pods_ViewCodeProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		78B9547E26E73DAF0060650A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78EFA6C626E7E51000441564 /* ViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreen.swift; sourceTree = "<group>"; };
 		78EFA6CB26E7EF3700441564 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		78EFA70326E952B900441564 /* GridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxView.swift; sourceTree = "<group>"; };
 		7EB220BD6288C8BC8C9AAD9C /* Pods-ViewCodeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeProject.release.xcconfig"; path = "Target Support Files/Pods-ViewCodeProject/Pods-ViewCodeProject.release.xcconfig"; sourceTree = "<group>"; };
 		92D67D96BFA0E34F423CC40A /* Pods-ViewCodeProject-ViewCodeProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeProject-ViewCodeProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-ViewCodeProject-ViewCodeProjectUITests/Pods-ViewCodeProject-ViewCodeProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9522EF4E386EEA5E2442D8C1 /* Pods-ViewCodeProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-ViewCodeProjectTests/Pods-ViewCodeProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 				9522EF4E386EEA5E2442D8C1 /* Pods-ViewCodeProjectTests.debug.xcconfig */,
 				F0BA6CF61CF11C0EA8580CAC /* Pods-ViewCodeProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +151,7 @@
 				78B9546826E73DAE0060650A /* Info.plist */,
 				78EFA6C626E7E51000441564 /* ViewControllerScreen.swift */,
 				78EFA6CB26E7EF3700441564 /* ViewCode.swift */,
+				78EFA70326E952B900441564 /* GridBoxView.swift */,
 			);
 			path = ViewCodeProject;
 			sourceTree = "<group>";
@@ -409,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78EFA70426E952B900441564 /* GridBoxView.swift in Sources */,
 				78EFA6C726E7E51000441564 /* ViewControllerScreen.swift in Sources */,
 				78EFA6CC26E7EF3700441564 /* ViewCode.swift in Sources */,
 				78B9545F26E73DAB0060650A /* ViewController.swift in Sources */,

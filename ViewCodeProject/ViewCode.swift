@@ -5,6 +5,8 @@
 //  Created by Atila Bastos on 07/09/21.
 //
 
+import Foundation
+import SnapKit
 
 // Definimos um protocolo para organizar através de métodos o que deve ser feito para construir uma Interface usando ViewCode, definirmos uma ordem em que esses passos devam ser executados e padronizar a construção para facilitar o entendimento caso hajam mais pessoas trabalhando em um projeto.
 protocol CodeView {
