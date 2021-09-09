@@ -26,6 +26,7 @@ final class ViewControllerScreen: UIView {
     
     let leftBox = GridBoxView()
     let rightBox = GridBoxView()
+    let topBox = BoxView()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -46,6 +47,7 @@ extension ViewControllerScreen: CodeView {
         gridContainer.addArrangedSubview(leftBox)
         gridContainer.addArrangedSubview(rightBox)
         addSubview(gridContainer)
+        addSubview(topBox)
     }
     
     func setupConstraints() {
@@ -55,6 +57,13 @@ extension ViewControllerScreen: CodeView {
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(300)
             make.centerY.equalToSuperview()
+        }
+        
+        topBox.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().inset(15)
+            make.height.equalTo(150)
+            make.centerY.equalToSuperview().offset(-250)
         }
         
         button.snp.makeConstraints { make in
