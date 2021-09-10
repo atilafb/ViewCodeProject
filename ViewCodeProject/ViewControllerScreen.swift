@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol ViewControllerScreenDelegate {
+    func communicate(_ viewControllerScreen: ViewControllerScreen, communicate: UIButton)
+}
+
 final class ViewControllerScreen: UIView {
+    
+    var delegate: ViewControllerScreenDelegate?
     
     lazy var button: UIButton = {
         let view = UIButton(frame: .zero)
         view.backgroundColor = .red
         view.setTitle("Fetch", for: .normal)
+        // Adicionando o target ao botão para dar a ação do pressionar.
+        view.addTarget(self, action: #selector(self.fetchPressed), for: .touchUpInside)
         return view
     }()
     
@@ -39,7 +47,13 @@ final class ViewControllerScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // Método que vai dar a ação do botão pressionado. (Substituindo o antigo @IBAction usado no Storyboard)
+    @objc func fetchPressed(sender: UIButton) {
+        delegate?.communicate(self, communicate: button)
+    }
+    
 }
+
 
 extension ViewControllerScreen: CodeView {
     func buildViewHierarchy() {
@@ -77,6 +91,5 @@ extension ViewControllerScreen: CodeView {
     func setupAdditionalConfiguration() {
         backgroundColor = .darkGray
     }
-    
     
 }

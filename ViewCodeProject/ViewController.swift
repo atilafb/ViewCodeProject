@@ -17,9 +17,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen.delegate = self
         
     }
 
-
 }
 
+// Para fazer a comunicação entre a View com a Controller a gente cria o método na própria View e se comunica com a Controller via delegate.
+
+extension ViewController: ViewControllerScreenDelegate {
+    func communicate(_ viewControllerScreen: ViewControllerScreen, communicate: UIButton) {
+        print("Fetch button pressed")
+    }
+
+}
